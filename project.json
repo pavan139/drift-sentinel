@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "16",
+  "repository_name": "drift-sentinel",
+  "title": "Drift Sentinel",
+  "package": "drift_sentinel",
+  "language": "python",
+  "field": "Monitoring and reliability engineering",
+  "focus": "Sequential drift monitoring, delayed-label joins, alert state and operational metrics",
+  "ai_connection": "Detecting model/data degradation after release",
+  "smoke_commands": [
+    {
+      "name": "demo",
+      "args": []
+    },
+    {
+      "name": "evaluate",
+      "args": []
+    }
+  ],
+  "layout": {
+    "docs_root": "analysis",
+    "tests_root": "tests",
+    "tools_root": "tools",
+    "config_root": "monitoring",
+    "examples_root": "measurements",
+    "verifier": "tools/check_monitor.py",
+    "source_roots": [
+      "src"
+    ],
+    "documents": {
+      "architecture": "analysis/observation-path.md",
+      "design": "analysis/spending-and-delay.md",
+      "review": "analysis/null-and-lifecycle-checks.md",
+      "experiments": "analysis/change-trajectories.md",
+      "publishing": "analysis/sharing-monitor.md",
+      "validation": "analysis/checked-monitor.md"
+    }
+  }
+}
