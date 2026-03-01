@@ -1,0 +1,3714 @@
+{
+  "change_at": 256,
+  "model_evaluation": false,
+  "prometheus": "# HELP drift_sentinel_predictions_total Unique predictions observed.\n# TYPE drift_sentinel_predictions_total counter\ndrift_sentinel_predictions_total 896\n# TYPE drift_sentinel_labels_total counter\ndrift_sentinel_labels_total 896\n# TYPE drift_sentinel_joined_total counter\ndrift_sentinel_joined_total 896\n# TYPE drift_sentinel_pending_predictions gauge\ndrift_sentinel_pending_predictions 0\n# TYPE drift_sentinel_pending_labels gauge\ndrift_sentinel_pending_labels 0\n# TYPE drift_sentinel_duplicate_inputs_total counter\ndrift_sentinel_duplicate_inputs_total 0\n# TYPE drift_sentinel_observations_total counter\ndrift_sentinel_observations_total{metric=\"covariate_mean\",segment=\"a\"} 460\ndrift_sentinel_observations_total{metric=\"covariate_mean\",segment=\"b\"} 436\ndrift_sentinel_observations_total{metric=\"covariate_mean\",segment=\"global\"} 896\ndrift_sentinel_observations_total{metric=\"quality_loss\",segment=\"a\"} 460\ndrift_sentinel_observations_total{metric=\"quality_loss\",segment=\"b\"} 436\ndrift_sentinel_observations_total{metric=\"quality_loss\",segment=\"global\"} 896\n# TYPE drift_sentinel_observed_mean gauge\ndrift_sentinel_observed_mean{metric=\"covariate_mean\",segment=\"a\"} 0.502680826263\ndrift_sentinel_observed_mean{metric=\"covariate_mean\",segment=\"b\"} 0.501099862011\ndrift_sentinel_observed_mean{metric=\"covariate_mean\",segment=\"global\"} 0.501911517765\ndrift_sentinel_observed_mean{metric=\"quality_loss\",segment=\"a\"} 0.39347826087\ndrift_sentinel_observed_mean{metric=\"quality_loss\",segment=\"b\"} 0.362385321101\ndrift_sentinel_observed_mean{metric=\"quality_loss\",segment=\"global\"} 0.378348214286\n# TYPE drift_sentinel_looks_total counter\ndrift_sentinel_looks_total{metric=\"covariate_mean\",segment=\"a\"} 7\ndrift_sentinel_looks_total{metric=\"covariate_mean\",segment=\"b\"} 6\ndrift_sentinel_looks_total{metric=\"covariate_mean\",segment=\"global\"} 14\ndrift_sentinel_looks_total{metric=\"quality_loss\",segment=\"a\"} 7\ndrift_sentinel_looks_total{metric=\"quality_loss\",segment=\"b\"} 6\ndrift_sentinel_looks_total{metric=\"quality_loss\",segment=\"global\"} 14\n# TYPE drift_sentinel_alerts_opened_total counter\ndrift_sentinel_alerts_opened_total{metric=\"covariate_mean\",segment=\"a\"} 0\ndrift_sentinel_alerts_opened_total{metric=\"covariate_mean\",segment=\"b\"} 0\ndrift_sentinel_alerts_opened_total{metric=\"covariate_mean\",segment=\"global\"} 0\ndrift_sentinel_alerts_opened_total{metric=\"quality_loss\",segment=\"a\"} 1\ndrift_sentinel_alerts_opened_total{metric=\"quality_loss\",segment=\"b\"} 1\ndrift_sentinel_alerts_opened_total{metric=\"quality_loss\",segment=\"global\"} 1\n# TYPE drift_sentinel_alerts_resolved_total counter\ndrift_sentinel_alerts_resolved_total{metric=\"covariate_mean\",segment=\"a\"} 0\ndrift_sentinel_alerts_resolved_total{metric=\"covariate_mean\",segment=\"b\"} 0\ndrift_sentinel_alerts_resolved_total{metric=\"covariate_mean\",segment=\"global\"} 0\ndrift_sentinel_alerts_resolved_total{metric=\"quality_loss\",segment=\"a\"} 1\ndrift_sentinel_alerts_resolved_total{metric=\"quality_loss\",segment=\"b\"} 0\ndrift_sentinel_alerts_resolved_total{metric=\"quality_loss\",segment=\"global\"} 1\n# TYPE drift_sentinel_alert_firing gauge\ndrift_sentinel_alert_firing{metric=\"covariate_mean\",segment=\"a\"} 0\ndrift_sentinel_alert_firing{metric=\"covariate_mean\",segment=\"b\"} 0\ndrift_sentinel_alert_firing{metric=\"covariate_mean\",segment=\"global\"} 0\ndrift_sentinel_alert_firing{metric=\"quality_loss\",segment=\"a\"} 0\ndrift_sentinel_alert_firing{metric=\"quality_loss\",segment=\"b\"} 1\ndrift_sentinel_alert_firing{metric=\"quality_loss\",segment=\"global\"} 0\n# TYPE drift_sentinel_alpha_spent gauge\ndrift_sentinel_alpha_spent{metric=\"covariate_mean\",segment=\"a\"} 0.00765885333756\ndrift_sentinel_alpha_spent{metric=\"covariate_mean\",segment=\"b\"} 0.00755546437466\ndrift_sentinel_alpha_spent{metric=\"covariate_mean\",segment=\"global\"} 0.00798408819115\ndrift_sentinel_alpha_spent{metric=\"quality_loss\",segment=\"a\"} 0.00765885333756\ndrift_sentinel_alpha_spent{metric=\"quality_loss\",segment=\"b\"} 0.00755546437466\ndrift_sentinel_alpha_spent{metric=\"quality_loss\",segment=\"global\"} 0.00798408819115\n# TYPE drift_sentinel_last_effect gauge\ndrift_sentinel_last_effect{metric=\"covariate_mean\",segment=\"a\"} 0.00678611132675\ndrift_sentinel_last_effect{metric=\"covariate_mean\",segment=\"b\"} -0.0064320462685\ndrift_sentinel_last_effect{metric=\"covariate_mean\",segment=\"global\"} 0.00249107462963\ndrift_sentinel_last_effect{metric=\"quality_loss\",segment=\"a\"} -0.0703125\ndrift_sentinel_last_effect{metric=\"quality_loss\",segment=\"b\"} -0.015625\ndrift_sentinel_last_effect{metric=\"quality_loss\",segment=\"global\"} -0.01171875\n# TYPE drift_sentinel_last_boundary gauge\ndrift_sentinel_last_boundary{metric=\"covariate_mean\",segment=\"a\"} 0.294532594021\ndrift_sentinel_last_boundary{metric=\"covariate_mean\",segment=\"b\"} 0.289896134886\ndrift_sentinel_last_boundary{metric=\"covariate_mean\",segment=\"global\"} 0.305675254724\ndrift_sentinel_last_boundary{metric=\"quality_loss\",segment=\"a\"} 0.284002350429\ndrift_sentinel_last_boundary{metric=\"quality_loss\",segment=\"b\"} 0.279191072798\ndrift_sentinel_last_boundary{metric=\"quality_loss\",segment=\"global\"} 0.296114333038\n",
+  "provenance": "Synthetic delayed classification labels; independent historical baseline.",
+  "recovery_at": 576,
+  "samples": 896,
+  "scenario": "recovering",
+  "seed": 17,
+  "state": {
+    "alert_events": [
+      {
+        "alpha": 0.00014072386616991359,
+        "arrival_index": 400,
+        "boundary": 0.27132495249283634,
+        "current_mean": 0.890625,
+        "effect": 0.78515625,
+        "look": 6,
+        "metric": "quality_loss",
+        "phase": "firing",
+        "reference_count": 1024,
+        "reference_mean": 0.10546875,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": true,
+        "spent_alpha": 0.007555464374662659,
+        "transition": "opened"
+      },
+      {
+        "alpha": 0.00031662869888230555,
+        "arrival_index": 517,
+        "boundary": 0.26612091007057337,
+        "current_mean": 0.890625,
+        "effect": 0.796875,
+        "look": 4,
+        "metric": "quality_loss",
+        "phase": "firing",
+        "reference_count": 512,
+        "reference_mean": 0.09375,
+        "sample_count": 64,
+        "segment": "b",
+        "signal": true,
+        "spent_alpha": 0.0072120981412080705,
+        "transition": "opened"
+      },
+      {
+        "alpha": 0.00031662869888230555,
+        "arrival_index": 532,
+        "boundary": 0.26612091007057337,
+        "current_mean": 0.921875,
+        "effect": 0.8046875,
+        "look": 4,
+        "metric": "quality_loss",
+        "phase": "firing",
+        "reference_count": 512,
+        "reference_mean": 0.1171875,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": true,
+        "spent_alpha": 0.0072120981412080705,
+        "transition": "opened"
+      },
+      {
+        "alpha": 4.186825770344536e-05,
+        "arrival_index": 718,
+        "boundary": 0.2892750097600901,
+        "current_mean": 0.09375,
+        "effect": -0.01171875,
+        "look": 11,
+        "metric": "quality_loss",
+        "phase": "cooldown",
+        "reference_count": 1024,
+        "reference_mean": 0.10546875,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007893083302328156,
+        "transition": "resolved"
+      },
+      {
+        "alpha": 0.00010338896290034467,
+        "arrival_index": 887,
+        "boundary": 0.28400235042881694,
+        "current_mean": 0.046875,
+        "effect": -0.0703125,
+        "look": 7,
+        "metric": "quality_loss",
+        "phase": "cooldown",
+        "reference_count": 512,
+        "reference_mean": 0.1171875,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": false,
+        "spent_alpha": 0.007658853337563004,
+        "transition": "resolved"
+      }
+    ],
+    "arrival_index": 918,
+    "baseline_sha256": "96541297d0e8fc653220627d34b946849473d02d9f465e010fa36d21b2375ea1",
+    "channels": [
+      {
+        "cumulative_mean": 0.5026808262630222,
+        "last": {
+          "alpha": 0.00010338896290034467,
+          "arrival_index": 871,
+          "boundary": 0.2945325940209889,
+          "current_mean": 0.5090705020628075,
+          "effect": 0.006786111326748556,
+          "look": 7,
+          "metric": "covariate_mean",
+          "phase": "clear",
+          "reference_count": 512,
+          "reference_mean": 0.5022843907360589,
+          "sample_count": 64,
+          "segment": "a",
+          "signal": false,
+          "spent_alpha": 0.007658853337563004,
+          "transition": null
+        },
+        "looks": 7,
+        "metric": "covariate_mean",
+        "observations": 460,
+        "opened": 0,
+        "pending_block_count": 12,
+        "phase": "clear",
+        "quality_correct": null,
+        "quality_incorrect": null,
+        "resolved": 0,
+        "segment": "a",
+        "spent_alpha": 0.007658853337563004,
+        "stream_alpha": 0.008333333333333333
+      },
+      {
+        "cumulative_mean": 0.5010998620109404,
+        "last": {
+          "alpha": 0.00014072386616991359,
+          "arrival_index": 784,
+          "boundary": 0.2898961348860901,
+          "current_mean": 0.4933026711886627,
+          "effect": -0.006432046268497471,
+          "look": 6,
+          "metric": "covariate_mean",
+          "phase": "clear",
+          "reference_count": 512,
+          "reference_mean": 0.4997347174571602,
+          "sample_count": 64,
+          "segment": "b",
+          "signal": false,
+          "spent_alpha": 0.007555464374662659,
+          "transition": null
+        },
+        "looks": 6,
+        "metric": "covariate_mean",
+        "observations": 436,
+        "opened": 0,
+        "pending_block_count": 52,
+        "phase": "clear",
+        "quality_correct": null,
+        "quality_incorrect": null,
+        "resolved": 0,
+        "segment": "b",
+        "spent_alpha": 0.007555464374662659,
+        "stream_alpha": 0.008333333333333333
+      },
+      {
+        "cumulative_mean": 0.5019115177653574,
+        "last": {
+          "alpha": 2.5847240725086168e-05,
+          "arrival_index": 895,
+          "boundary": 0.30567525472379453,
+          "current_mean": 0.5035006287262358,
+          "effect": 0.0024910746296262776,
+          "look": 14,
+          "metric": "covariate_mean",
+          "phase": "clear",
+          "reference_count": 1024,
+          "reference_mean": 0.5010095540966095,
+          "sample_count": 64,
+          "segment": "global",
+          "signal": false,
+          "spent_alpha": 0.007984088191146708,
+          "transition": null
+        },
+        "looks": 14,
+        "metric": "covariate_mean",
+        "observations": 896,
+        "opened": 0,
+        "pending_block_count": 0,
+        "phase": "clear",
+        "quality_correct": null,
+        "quality_incorrect": null,
+        "resolved": 0,
+        "segment": "global",
+        "spent_alpha": 0.007984088191146708,
+        "stream_alpha": 0.008333333333333333
+      },
+      {
+        "cumulative_mean": 0.3934782608695652,
+        "last": {
+          "alpha": 0.00010338896290034467,
+          "arrival_index": 887,
+          "boundary": 0.28400235042881694,
+          "current_mean": 0.046875,
+          "effect": -0.0703125,
+          "look": 7,
+          "metric": "quality_loss",
+          "phase": "cooldown",
+          "reference_count": 512,
+          "reference_mean": 0.1171875,
+          "sample_count": 64,
+          "segment": "a",
+          "signal": false,
+          "spent_alpha": 0.007658853337563004,
+          "transition": "resolved"
+        },
+        "looks": 7,
+        "metric": "quality_loss",
+        "observations": 460,
+        "opened": 1,
+        "pending_block_count": 12,
+        "phase": "cooldown",
+        "quality_correct": 279.0,
+        "quality_incorrect": 181.0,
+        "resolved": 1,
+        "segment": "a",
+        "spent_alpha": 0.007658853337563004,
+        "stream_alpha": 0.008333333333333333
+      },
+      {
+        "cumulative_mean": 0.3623853211009174,
+        "last": {
+          "alpha": 0.00014072386616991359,
+          "arrival_index": 797,
+          "boundary": 0.27919107279827915,
+          "current_mean": 0.078125,
+          "effect": -0.015625,
+          "look": 6,
+          "metric": "quality_loss",
+          "phase": "firing",
+          "reference_count": 512,
+          "reference_mean": 0.09375,
+          "sample_count": 64,
+          "segment": "b",
+          "signal": false,
+          "spent_alpha": 0.007555464374662659,
+          "transition": null
+        },
+        "looks": 6,
+        "metric": "quality_loss",
+        "observations": 436,
+        "opened": 1,
+        "pending_block_count": 52,
+        "phase": "firing",
+        "quality_correct": 278.0,
+        "quality_incorrect": 158.0,
+        "resolved": 0,
+        "segment": "b",
+        "spent_alpha": 0.007555464374662659,
+        "stream_alpha": 0.008333333333333333
+      },
+      {
+        "cumulative_mean": 0.3783482142857143,
+        "last": {
+          "alpha": 2.5847240725086168e-05,
+          "arrival_index": 918,
+          "boundary": 0.2961143330380587,
+          "current_mean": 0.09375,
+          "effect": -0.01171875,
+          "look": 14,
+          "metric": "quality_loss",
+          "phase": "clear",
+          "reference_count": 1024,
+          "reference_mean": 0.10546875,
+          "sample_count": 64,
+          "segment": "global",
+          "signal": false,
+          "spent_alpha": 0.007984088191146708,
+          "transition": null
+        },
+        "looks": 14,
+        "metric": "quality_loss",
+        "observations": 896,
+        "opened": 1,
+        "pending_block_count": 0,
+        "phase": "clear",
+        "quality_correct": 557.0,
+        "quality_incorrect": 339.0,
+        "resolved": 1,
+        "segment": "global",
+        "spent_alpha": 0.007984088191146708,
+        "stream_alpha": 0.008333333333333333
+      }
+    ],
+    "config": {
+      "block_size": 64,
+      "cooldown_looks": 2,
+      "family_alpha": 0.05,
+      "hysteresis_ratio": 0.5,
+      "max_pending": 2048,
+      "max_predictions": 10000,
+      "min_reference": 128,
+      "open_after": 2,
+      "resolve_after": 2,
+      "segments": [
+        "a",
+        "b"
+      ],
+      "trace_limit": 512
+    },
+    "duplicate_inputs": 0,
+    "guarantee_scope": "Lifetime family false-opening probability under independent stationary bounded observations and noninformative label arrival; not universal drift detection.",
+    "joined": 896,
+    "labels": 896,
+    "pending_labels": 0,
+    "pending_predictions": 0,
+    "predictions": 896,
+    "references": {
+      "a": {
+        "count": 512,
+        "feature_mean": 0.5022843907360589,
+        "loss_mean": 0.1171875
+      },
+      "b": {
+        "count": 512,
+        "feature_mean": 0.4997347174571602,
+        "loss_mean": 0.09375
+      },
+      "global": {
+        "count": 1024,
+        "feature_mean": 0.5010095540966095,
+        "loss_mean": 0.10546875
+      }
+    },
+    "trace": [
+      {
+        "arrival_index": 738,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "afaa30426891c6ee",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 739,
+        "kind": "prediction",
+        "request_hash": "c36246f1064af721",
+        "segment": "a",
+        "sequence": 739
+      },
+      {
+        "arrival_index": 740,
+        "kind": "prediction",
+        "request_hash": "7aa2053acc03e543",
+        "segment": "a",
+        "sequence": 740
+      },
+      {
+        "arrival_index": 741,
+        "kind": "prediction",
+        "request_hash": "6992d20ab60a5905",
+        "segment": "a",
+        "sequence": 741
+      },
+      {
+        "arrival_index": 741,
+        "kind": "label",
+        "request_hash": "148e63dc1318634e"
+      },
+      {
+        "arrival_index": 741,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "148e63dc1318634e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 741,
+        "kind": "label",
+        "request_hash": "7aa2053acc03e543"
+      },
+      {
+        "arrival_index": 741,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7aa2053acc03e543",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 742,
+        "kind": "prediction",
+        "request_hash": "504e6046d2aedf8f",
+        "segment": "b",
+        "sequence": 742
+      },
+      {
+        "arrival_index": 743,
+        "kind": "prediction",
+        "request_hash": "9e68ffb1e7c4cf01",
+        "segment": "b",
+        "sequence": 743
+      },
+      {
+        "arrival_index": 743,
+        "kind": "label",
+        "request_hash": "365d1d6871686641"
+      },
+      {
+        "arrival_index": 743,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "365d1d6871686641",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 743,
+        "kind": "label",
+        "request_hash": "6e1636ab2b022708"
+      },
+      {
+        "arrival_index": 743,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6e1636ab2b022708",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 744,
+        "kind": "prediction",
+        "request_hash": "2468ea4e16320f24",
+        "segment": "b",
+        "sequence": 744
+      },
+      {
+        "arrival_index": 745,
+        "kind": "prediction",
+        "request_hash": "939fee900a3e6190",
+        "segment": "a",
+        "sequence": 745
+      },
+      {
+        "arrival_index": 746,
+        "kind": "prediction",
+        "request_hash": "5fb3fbbd22cd2065",
+        "segment": "a",
+        "sequence": 746
+      },
+      {
+        "arrival_index": 747,
+        "kind": "prediction",
+        "request_hash": "327466e8ec3768a1",
+        "segment": "b",
+        "sequence": 747
+      },
+      {
+        "arrival_index": 748,
+        "kind": "prediction",
+        "request_hash": "3c899d3f1eccc3f9",
+        "segment": "b",
+        "sequence": 748
+      },
+      {
+        "arrival_index": 749,
+        "kind": "prediction",
+        "request_hash": "4e79806a3bf445a3",
+        "segment": "a",
+        "sequence": 749
+      },
+      {
+        "arrival_index": 750,
+        "kind": "prediction",
+        "request_hash": "221bfbe7be9460ff",
+        "segment": "a",
+        "sequence": 750
+      },
+      {
+        "arrival_index": 750,
+        "kind": "label",
+        "request_hash": "9df52bf198594581"
+      },
+      {
+        "arrival_index": 750,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "9df52bf198594581",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "prediction",
+        "request_hash": "f74d1b56f32b4a73",
+        "segment": "b",
+        "sequence": 751
+      },
+      {
+        "arrival_index": 751,
+        "kind": "label",
+        "request_hash": "0d24ed993245b9b0"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "0d24ed993245b9b0",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "label",
+        "request_hash": "9e68ffb1e7c4cf01"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "9e68ffb1e7c4cf01",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "label",
+        "request_hash": "939fee900a3e6190"
+      },
+      {
+        "arrival_index": 751,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "939fee900a3e6190",
+        "segment": "a"
+      },
+      {
+        "alpha": 0.00014072386616991359,
+        "arrival_index": 752,
+        "boundary": 0.2898961348860901,
+        "current_mean": 0.509806315428582,
+        "effect": 0.007521924692523108,
+        "kind": "look",
+        "look": 6,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 512,
+        "reference_mean": 0.5022843907360589,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": false,
+        "spent_alpha": 0.007555464374662659,
+        "transition": null
+      },
+      {
+        "arrival_index": 752,
+        "kind": "prediction",
+        "request_hash": "05d197a26b0ef887",
+        "segment": "a",
+        "sequence": 752
+      },
+      {
+        "arrival_index": 752,
+        "kind": "label",
+        "request_hash": "504e6046d2aedf8f"
+      },
+      {
+        "arrival_index": 752,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "504e6046d2aedf8f",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 752,
+        "kind": "label",
+        "request_hash": "2468ea4e16320f24"
+      },
+      {
+        "arrival_index": 752,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2468ea4e16320f24",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 753,
+        "kind": "prediction",
+        "request_hash": "52f6bd8a50157073",
+        "segment": "a",
+        "sequence": 753
+      },
+      {
+        "arrival_index": 754,
+        "kind": "prediction",
+        "request_hash": "dba7230adb3c6870",
+        "segment": "a",
+        "sequence": 754
+      },
+      {
+        "arrival_index": 755,
+        "kind": "prediction",
+        "request_hash": "7dddc5dba0e3d2aa",
+        "segment": "b",
+        "sequence": 755
+      },
+      {
+        "arrival_index": 756,
+        "kind": "prediction",
+        "request_hash": "1ff404371563499f",
+        "segment": "b",
+        "sequence": 756
+      },
+      {
+        "arrival_index": 756,
+        "kind": "label",
+        "request_hash": "6c05a2e6d8358392"
+      },
+      {
+        "arrival_index": 756,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6c05a2e6d8358392",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 757,
+        "kind": "prediction",
+        "request_hash": "ac1982e276bd074e",
+        "segment": "b",
+        "sequence": 757
+      },
+      {
+        "arrival_index": 757,
+        "kind": "label",
+        "request_hash": "bc41b03f4cc43751"
+      },
+      {
+        "arrival_index": 757,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "bc41b03f4cc43751",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 757,
+        "kind": "label",
+        "request_hash": "dba7230adb3c6870"
+      },
+      {
+        "arrival_index": 757,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "dba7230adb3c6870",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 758,
+        "kind": "prediction",
+        "request_hash": "2d0b3806018e39ca",
+        "segment": "a",
+        "sequence": 758
+      },
+      {
+        "arrival_index": 758,
+        "kind": "label",
+        "request_hash": "a9ad57a06b174c5b"
+      },
+      {
+        "arrival_index": 758,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "a9ad57a06b174c5b",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 758,
+        "kind": "label",
+        "request_hash": "2d0b3806018e39ca"
+      },
+      {
+        "arrival_index": 758,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2d0b3806018e39ca",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 759,
+        "kind": "prediction",
+        "request_hash": "7ccf0ced005d1cd7",
+        "segment": "a",
+        "sequence": 759
+      },
+      {
+        "arrival_index": 759,
+        "kind": "label",
+        "request_hash": "4034bfc9d13d8887"
+      },
+      {
+        "arrival_index": 759,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "4034bfc9d13d8887",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 760,
+        "kind": "prediction",
+        "request_hash": "0eb08d2f2290aade",
+        "segment": "a",
+        "sequence": 760
+      },
+      {
+        "arrival_index": 760,
+        "kind": "label",
+        "request_hash": "e1a0843dd5f50670"
+      },
+      {
+        "arrival_index": 760,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e1a0843dd5f50670",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 760,
+        "kind": "label",
+        "request_hash": "221bfbe7be9460ff"
+      },
+      {
+        "arrival_index": 760,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "221bfbe7be9460ff",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 761,
+        "kind": "prediction",
+        "request_hash": "ed62dcf62428f7b3",
+        "segment": "a",
+        "sequence": 761
+      },
+      {
+        "arrival_index": 762,
+        "kind": "prediction",
+        "request_hash": "e284d7768ef9510c",
+        "segment": "b",
+        "sequence": 762
+      },
+      {
+        "arrival_index": 763,
+        "kind": "prediction",
+        "request_hash": "6b6b6c6d7cd10cac",
+        "segment": "b",
+        "sequence": 763
+      },
+      {
+        "arrival_index": 763,
+        "kind": "label",
+        "request_hash": "900b69e72ef2789b"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "900b69e72ef2789b",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "label",
+        "request_hash": "dd380f811ba9af75"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "dd380f811ba9af75",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "label",
+        "request_hash": "16f3667269f73961"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "16f3667269f73961",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "label",
+        "request_hash": "6992d20ab60a5905"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6992d20ab60a5905",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "label",
+        "request_hash": "3c899d3f1eccc3f9"
+      },
+      {
+        "arrival_index": 763,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "3c899d3f1eccc3f9",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 764,
+        "kind": "prediction",
+        "request_hash": "d50fd24bff792b72",
+        "segment": "b",
+        "sequence": 764
+      },
+      {
+        "arrival_index": 765,
+        "kind": "prediction",
+        "request_hash": "f78ffa82a2fde56e",
+        "segment": "a",
+        "sequence": 765
+      },
+      {
+        "arrival_index": 765,
+        "kind": "label",
+        "request_hash": "44182a909f86082b"
+      },
+      {
+        "arrival_index": 765,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "44182a909f86082b",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 765,
+        "kind": "label",
+        "request_hash": "ac1982e276bd074e"
+      },
+      {
+        "arrival_index": 765,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ac1982e276bd074e",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 766,
+        "kind": "prediction",
+        "request_hash": "24730c4aa9e6ecc6",
+        "segment": "a",
+        "sequence": 766
+      },
+      {
+        "alpha": 3.5180966542478396e-05,
+        "arrival_index": 767,
+        "boundary": 0.30146014530097837,
+        "current_mean": 0.49550436672127557,
+        "effect": -0.005505187375333953,
+        "kind": "look",
+        "look": 12,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 1024,
+        "reference_mean": 0.5010095540966095,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007928264268870635,
+        "transition": null
+      },
+      {
+        "arrival_index": 767,
+        "kind": "prediction",
+        "request_hash": "7a8790c2d282502c",
+        "segment": "a",
+        "sequence": 767
+      },
+      {
+        "arrival_index": 767,
+        "kind": "label",
+        "request_hash": "ed62dcf62428f7b3"
+      },
+      {
+        "arrival_index": 767,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ed62dcf62428f7b3",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 768,
+        "kind": "prediction",
+        "request_hash": "d748e6215af5cad5",
+        "segment": "a",
+        "sequence": 768
+      },
+      {
+        "arrival_index": 768,
+        "kind": "label",
+        "request_hash": "f74d1b56f32b4a73"
+      },
+      {
+        "arrival_index": 768,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f74d1b56f32b4a73",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 769,
+        "kind": "prediction",
+        "request_hash": "d7887d23fa89544e",
+        "segment": "b",
+        "sequence": 769
+      },
+      {
+        "arrival_index": 769,
+        "kind": "label",
+        "request_hash": "52f6bd8a50157073"
+      },
+      {
+        "alpha": 0.00014072386616991359,
+        "arrival_index": 769,
+        "boundary": 0.27919107279827915,
+        "current_mean": 0.09375,
+        "effect": -0.0234375,
+        "kind": "look",
+        "look": 6,
+        "metric": "quality_loss",
+        "phase": "firing",
+        "reference_count": 512,
+        "reference_mean": 0.1171875,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": false,
+        "spent_alpha": 0.007555464374662659,
+        "transition": null
+      },
+      {
+        "arrival_index": 769,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "52f6bd8a50157073",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 770,
+        "kind": "prediction",
+        "request_hash": "e3b75318a9c2f2d4",
+        "segment": "b",
+        "sequence": 770
+      },
+      {
+        "arrival_index": 770,
+        "kind": "label",
+        "request_hash": "c36246f1064af721"
+      },
+      {
+        "arrival_index": 770,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "c36246f1064af721",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 770,
+        "kind": "label",
+        "request_hash": "f78ffa82a2fde56e"
+      },
+      {
+        "arrival_index": 770,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f78ffa82a2fde56e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 771,
+        "kind": "prediction",
+        "request_hash": "f32f50a7d50cb10c",
+        "segment": "b",
+        "sequence": 771
+      },
+      {
+        "arrival_index": 772,
+        "kind": "prediction",
+        "request_hash": "93a256c5455e64a0",
+        "segment": "b",
+        "sequence": 772
+      },
+      {
+        "arrival_index": 773,
+        "kind": "prediction",
+        "request_hash": "944572d41c751d3e",
+        "segment": "a",
+        "sequence": 773
+      },
+      {
+        "arrival_index": 773,
+        "kind": "label",
+        "request_hash": "7dddc5dba0e3d2aa"
+      },
+      {
+        "arrival_index": 773,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7dddc5dba0e3d2aa",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 774,
+        "kind": "prediction",
+        "request_hash": "9d764677f05c9912",
+        "segment": "a",
+        "sequence": 774
+      },
+      {
+        "arrival_index": 774,
+        "kind": "label",
+        "request_hash": "24730c4aa9e6ecc6"
+      },
+      {
+        "arrival_index": 774,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "24730c4aa9e6ecc6",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 775,
+        "kind": "prediction",
+        "request_hash": "63d0d0aaf03dabec",
+        "segment": "b",
+        "sequence": 775
+      },
+      {
+        "arrival_index": 775,
+        "kind": "label",
+        "request_hash": "327466e8ec3768a1"
+      },
+      {
+        "arrival_index": 775,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "327466e8ec3768a1",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 776,
+        "kind": "prediction",
+        "request_hash": "2f1c186635c73fbe",
+        "segment": "b",
+        "sequence": 776
+      },
+      {
+        "arrival_index": 776,
+        "kind": "label",
+        "request_hash": "5fb3fbbd22cd2065"
+      },
+      {
+        "arrival_index": 776,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "5fb3fbbd22cd2065",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 776,
+        "kind": "label",
+        "request_hash": "05d197a26b0ef887"
+      },
+      {
+        "arrival_index": 776,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "05d197a26b0ef887",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 777,
+        "kind": "prediction",
+        "request_hash": "f73a563e79bac124",
+        "segment": "b",
+        "sequence": 777
+      },
+      {
+        "arrival_index": 777,
+        "kind": "label",
+        "request_hash": "4e79806a3bf445a3"
+      },
+      {
+        "arrival_index": 777,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "4e79806a3bf445a3",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 778,
+        "kind": "prediction",
+        "request_hash": "cf7dbb323fb8603e",
+        "segment": "a",
+        "sequence": 778
+      },
+      {
+        "arrival_index": 778,
+        "kind": "label",
+        "request_hash": "7ccf0ced005d1cd7"
+      },
+      {
+        "arrival_index": 778,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7ccf0ced005d1cd7",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 779,
+        "kind": "prediction",
+        "request_hash": "ff8fcd299fa3d795",
+        "segment": "b",
+        "sequence": 779
+      },
+      {
+        "arrival_index": 779,
+        "kind": "label",
+        "request_hash": "6b6b6c6d7cd10cac"
+      },
+      {
+        "arrival_index": 779,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "6b6b6c6d7cd10cac",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 780,
+        "kind": "prediction",
+        "request_hash": "ee081365142e87bc",
+        "segment": "a",
+        "sequence": 780
+      },
+      {
+        "arrival_index": 781,
+        "kind": "prediction",
+        "request_hash": "8696c46cc800d06a",
+        "segment": "a",
+        "sequence": 781
+      },
+      {
+        "arrival_index": 781,
+        "kind": "label",
+        "request_hash": "d50fd24bff792b72"
+      },
+      {
+        "arrival_index": 781,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d50fd24bff792b72",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 782,
+        "kind": "prediction",
+        "request_hash": "b811299769d72cc3",
+        "segment": "a",
+        "sequence": 782
+      },
+      {
+        "arrival_index": 783,
+        "kind": "prediction",
+        "request_hash": "2825eace5b450531",
+        "segment": "a",
+        "sequence": 783
+      },
+      {
+        "alpha": 0.00014072386616991359,
+        "arrival_index": 784,
+        "boundary": 0.2898961348860901,
+        "current_mean": 0.4933026711886627,
+        "effect": -0.006432046268497471,
+        "kind": "look",
+        "look": 6,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 512,
+        "reference_mean": 0.4997347174571602,
+        "sample_count": 64,
+        "segment": "b",
+        "signal": false,
+        "spent_alpha": 0.007555464374662659,
+        "transition": null
+      },
+      {
+        "arrival_index": 784,
+        "kind": "prediction",
+        "request_hash": "7dc119f47cfc7807",
+        "segment": "b",
+        "sequence": 784
+      },
+      {
+        "arrival_index": 784,
+        "kind": "label",
+        "request_hash": "1ff404371563499f"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "1ff404371563499f",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "label",
+        "request_hash": "0eb08d2f2290aade"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0eb08d2f2290aade",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "label",
+        "request_hash": "e284d7768ef9510c"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e284d7768ef9510c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "label",
+        "request_hash": "e3b75318a9c2f2d4"
+      },
+      {
+        "alpha": 3.5180966542478396e-05,
+        "arrival_index": 784,
+        "boundary": 0.2917611284681436,
+        "current_mean": 0.078125,
+        "effect": -0.02734375,
+        "kind": "look",
+        "look": 12,
+        "metric": "quality_loss",
+        "phase": "cooldown",
+        "reference_count": 1024,
+        "reference_mean": 0.10546875,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007928264268870635,
+        "transition": null
+      },
+      {
+        "arrival_index": 784,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e3b75318a9c2f2d4",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "label",
+        "request_hash": "ff8fcd299fa3d795"
+      },
+      {
+        "arrival_index": 784,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ff8fcd299fa3d795",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 785,
+        "kind": "prediction",
+        "request_hash": "82ae54f81a4b2898",
+        "segment": "b",
+        "sequence": 785
+      },
+      {
+        "arrival_index": 785,
+        "kind": "label",
+        "request_hash": "b811299769d72cc3"
+      },
+      {
+        "arrival_index": 785,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "b811299769d72cc3",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 786,
+        "kind": "prediction",
+        "request_hash": "b3e612f5326c04ab",
+        "segment": "a",
+        "sequence": 786
+      },
+      {
+        "arrival_index": 787,
+        "kind": "prediction",
+        "request_hash": "d6d2f6e83a51520c",
+        "segment": "b",
+        "sequence": 787
+      },
+      {
+        "arrival_index": 787,
+        "kind": "label",
+        "request_hash": "cf7dbb323fb8603e"
+      },
+      {
+        "arrival_index": 787,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "cf7dbb323fb8603e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 788,
+        "kind": "prediction",
+        "request_hash": "f9782fadf675eb5a",
+        "segment": "b",
+        "sequence": 788
+      },
+      {
+        "arrival_index": 789,
+        "kind": "prediction",
+        "request_hash": "299ee06aed10053f",
+        "segment": "a",
+        "sequence": 789
+      },
+      {
+        "arrival_index": 789,
+        "kind": "label",
+        "request_hash": "d748e6215af5cad5"
+      },
+      {
+        "arrival_index": 789,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d748e6215af5cad5",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 790,
+        "kind": "prediction",
+        "request_hash": "8a34009ea208044f",
+        "segment": "a",
+        "sequence": 790
+      },
+      {
+        "arrival_index": 790,
+        "kind": "label",
+        "request_hash": "7a8790c2d282502c"
+      },
+      {
+        "arrival_index": 790,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7a8790c2d282502c",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 790,
+        "kind": "label",
+        "request_hash": "2825eace5b450531"
+      },
+      {
+        "arrival_index": 790,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2825eace5b450531",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 791,
+        "kind": "prediction",
+        "request_hash": "371f686d886caae5",
+        "segment": "a",
+        "sequence": 791
+      },
+      {
+        "arrival_index": 791,
+        "kind": "label",
+        "request_hash": "d7887d23fa89544e"
+      },
+      {
+        "arrival_index": 791,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d7887d23fa89544e",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 791,
+        "kind": "label",
+        "request_hash": "944572d41c751d3e"
+      },
+      {
+        "arrival_index": 791,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "944572d41c751d3e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 792,
+        "kind": "prediction",
+        "request_hash": "0f74958c7c4e60a5",
+        "segment": "b",
+        "sequence": 792
+      },
+      {
+        "arrival_index": 792,
+        "kind": "label",
+        "request_hash": "f32f50a7d50cb10c"
+      },
+      {
+        "arrival_index": 792,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f32f50a7d50cb10c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 792,
+        "kind": "label",
+        "request_hash": "7dc119f47cfc7807"
+      },
+      {
+        "arrival_index": 792,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7dc119f47cfc7807",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 793,
+        "kind": "prediction",
+        "request_hash": "15b57ff5aa374fea",
+        "segment": "b",
+        "sequence": 793
+      },
+      {
+        "arrival_index": 794,
+        "kind": "prediction",
+        "request_hash": "90312087839ee429",
+        "segment": "b",
+        "sequence": 794
+      },
+      {
+        "arrival_index": 794,
+        "kind": "label",
+        "request_hash": "63d0d0aaf03dabec"
+      },
+      {
+        "arrival_index": 794,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "63d0d0aaf03dabec",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 795,
+        "kind": "prediction",
+        "request_hash": "72f9464a57f136d7",
+        "segment": "b",
+        "sequence": 795
+      },
+      {
+        "arrival_index": 795,
+        "kind": "label",
+        "request_hash": "15b57ff5aa374fea"
+      },
+      {
+        "arrival_index": 795,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "15b57ff5aa374fea",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 796,
+        "kind": "prediction",
+        "request_hash": "58d1d0870a89ae17",
+        "segment": "b",
+        "sequence": 796
+      },
+      {
+        "arrival_index": 796,
+        "kind": "label",
+        "request_hash": "0f74958c7c4e60a5"
+      },
+      {
+        "arrival_index": 796,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0f74958c7c4e60a5",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 797,
+        "kind": "prediction",
+        "request_hash": "00f4a6740fff1a09",
+        "segment": "a",
+        "sequence": 797
+      },
+      {
+        "arrival_index": 797,
+        "kind": "label",
+        "request_hash": "f9782fadf675eb5a"
+      },
+      {
+        "alpha": 0.00014072386616991359,
+        "arrival_index": 797,
+        "boundary": 0.27919107279827915,
+        "current_mean": 0.078125,
+        "effect": -0.015625,
+        "kind": "look",
+        "look": 6,
+        "metric": "quality_loss",
+        "phase": "firing",
+        "reference_count": 512,
+        "reference_mean": 0.09375,
+        "sample_count": 64,
+        "segment": "b",
+        "signal": false,
+        "spent_alpha": 0.007555464374662659,
+        "transition": null
+      },
+      {
+        "arrival_index": 797,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f9782fadf675eb5a",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 798,
+        "kind": "prediction",
+        "request_hash": "492477efb0d0c0bb",
+        "segment": "b",
+        "sequence": 798
+      },
+      {
+        "arrival_index": 798,
+        "kind": "label",
+        "request_hash": "f73a563e79bac124"
+      },
+      {
+        "arrival_index": 798,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f73a563e79bac124",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 798,
+        "kind": "label",
+        "request_hash": "b3e612f5326c04ab"
+      },
+      {
+        "arrival_index": 798,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "b3e612f5326c04ab",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 799,
+        "kind": "prediction",
+        "request_hash": "073d2efe38e41353",
+        "segment": "b",
+        "sequence": 799
+      },
+      {
+        "arrival_index": 799,
+        "kind": "label",
+        "request_hash": "9d764677f05c9912"
+      },
+      {
+        "arrival_index": 799,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "9d764677f05c9912",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 799,
+        "kind": "label",
+        "request_hash": "d6d2f6e83a51520c"
+      },
+      {
+        "arrival_index": 799,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d6d2f6e83a51520c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 800,
+        "kind": "prediction",
+        "request_hash": "85d7b2f7a44b50ab",
+        "segment": "b",
+        "sequence": 800
+      },
+      {
+        "arrival_index": 801,
+        "kind": "prediction",
+        "request_hash": "366ad954c659e2f0",
+        "segment": "b",
+        "sequence": 801
+      },
+      {
+        "arrival_index": 801,
+        "kind": "label",
+        "request_hash": "93a256c5455e64a0"
+      },
+      {
+        "arrival_index": 801,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "93a256c5455e64a0",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 802,
+        "kind": "prediction",
+        "request_hash": "d4cf0884191936b9",
+        "segment": "a",
+        "sequence": 802
+      },
+      {
+        "arrival_index": 803,
+        "kind": "prediction",
+        "request_hash": "dd1d8d47e61374bf",
+        "segment": "b",
+        "sequence": 803
+      },
+      {
+        "arrival_index": 803,
+        "kind": "label",
+        "request_hash": "90312087839ee429"
+      },
+      {
+        "arrival_index": 803,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "90312087839ee429",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 804,
+        "kind": "prediction",
+        "request_hash": "f7abb077cf7ffb2a",
+        "segment": "a",
+        "sequence": 804
+      },
+      {
+        "arrival_index": 805,
+        "kind": "prediction",
+        "request_hash": "2e6f826ec0fb9f94",
+        "segment": "a",
+        "sequence": 805
+      },
+      {
+        "arrival_index": 806,
+        "kind": "prediction",
+        "request_hash": "a56ec9653d440563",
+        "segment": "a",
+        "sequence": 806
+      },
+      {
+        "arrival_index": 806,
+        "kind": "label",
+        "request_hash": "ee081365142e87bc"
+      },
+      {
+        "arrival_index": 806,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ee081365142e87bc",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 807,
+        "kind": "prediction",
+        "request_hash": "6c950734091cc537",
+        "segment": "a",
+        "sequence": 807
+      },
+      {
+        "arrival_index": 807,
+        "kind": "label",
+        "request_hash": "2f1c186635c73fbe"
+      },
+      {
+        "arrival_index": 807,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2f1c186635c73fbe",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 807,
+        "kind": "label",
+        "request_hash": "82ae54f81a4b2898"
+      },
+      {
+        "arrival_index": 807,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "82ae54f81a4b2898",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 808,
+        "kind": "prediction",
+        "request_hash": "6d7f2489cb070840",
+        "segment": "b",
+        "sequence": 808
+      },
+      {
+        "arrival_index": 808,
+        "kind": "label",
+        "request_hash": "6d7f2489cb070840"
+      },
+      {
+        "arrival_index": 808,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "6d7f2489cb070840",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 809,
+        "kind": "prediction",
+        "request_hash": "9158d656aee5edb0",
+        "segment": "a",
+        "sequence": 809
+      },
+      {
+        "arrival_index": 809,
+        "kind": "label",
+        "request_hash": "299ee06aed10053f"
+      },
+      {
+        "arrival_index": 809,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "299ee06aed10053f",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 809,
+        "kind": "label",
+        "request_hash": "371f686d886caae5"
+      },
+      {
+        "arrival_index": 809,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "371f686d886caae5",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 810,
+        "kind": "prediction",
+        "request_hash": "aaa2c9c786e102e3",
+        "segment": "b",
+        "sequence": 810
+      },
+      {
+        "arrival_index": 810,
+        "kind": "label",
+        "request_hash": "dd1d8d47e61374bf"
+      },
+      {
+        "arrival_index": 810,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "dd1d8d47e61374bf",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 811,
+        "kind": "prediction",
+        "request_hash": "9c6cf453c05ac68d",
+        "segment": "b",
+        "sequence": 811
+      },
+      {
+        "arrival_index": 811,
+        "kind": "label",
+        "request_hash": "00f4a6740fff1a09"
+      },
+      {
+        "arrival_index": 811,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "00f4a6740fff1a09",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 811,
+        "kind": "label",
+        "request_hash": "d4cf0884191936b9"
+      },
+      {
+        "arrival_index": 811,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d4cf0884191936b9",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 812,
+        "kind": "prediction",
+        "request_hash": "70247a8acec727c3",
+        "segment": "a",
+        "sequence": 812
+      },
+      {
+        "arrival_index": 812,
+        "kind": "label",
+        "request_hash": "8696c46cc800d06a"
+      },
+      {
+        "arrival_index": 812,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8696c46cc800d06a",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 813,
+        "kind": "prediction",
+        "request_hash": "9b824d00af51bc39",
+        "segment": "a",
+        "sequence": 813
+      },
+      {
+        "arrival_index": 813,
+        "kind": "label",
+        "request_hash": "70247a8acec727c3"
+      },
+      {
+        "arrival_index": 813,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "70247a8acec727c3",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 814,
+        "kind": "prediction",
+        "request_hash": "efc1a556c81b8ab2",
+        "segment": "b",
+        "sequence": 814
+      },
+      {
+        "arrival_index": 814,
+        "kind": "label",
+        "request_hash": "073d2efe38e41353"
+      },
+      {
+        "arrival_index": 814,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "073d2efe38e41353",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 814,
+        "kind": "label",
+        "request_hash": "2e6f826ec0fb9f94"
+      },
+      {
+        "arrival_index": 814,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2e6f826ec0fb9f94",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 815,
+        "kind": "prediction",
+        "request_hash": "a2d3608044a5ca43",
+        "segment": "a",
+        "sequence": 815
+      },
+      {
+        "arrival_index": 816,
+        "kind": "prediction",
+        "request_hash": "e42ff05ce28e1afe",
+        "segment": "a",
+        "sequence": 816
+      },
+      {
+        "arrival_index": 816,
+        "kind": "label",
+        "request_hash": "f7abb077cf7ffb2a"
+      },
+      {
+        "arrival_index": 816,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "f7abb077cf7ffb2a",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 817,
+        "kind": "prediction",
+        "request_hash": "688322328c566771",
+        "segment": "b",
+        "sequence": 817
+      },
+      {
+        "arrival_index": 817,
+        "kind": "label",
+        "request_hash": "72f9464a57f136d7"
+      },
+      {
+        "arrival_index": 817,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "72f9464a57f136d7",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 817,
+        "kind": "label",
+        "request_hash": "9b824d00af51bc39"
+      },
+      {
+        "arrival_index": 817,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "9b824d00af51bc39",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 818,
+        "kind": "prediction",
+        "request_hash": "699a94e999b684ff",
+        "segment": "a",
+        "sequence": 818
+      },
+      {
+        "arrival_index": 818,
+        "kind": "label",
+        "request_hash": "8a34009ea208044f"
+      },
+      {
+        "arrival_index": 818,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8a34009ea208044f",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 819,
+        "kind": "prediction",
+        "request_hash": "0270a6488ebfd624",
+        "segment": "a",
+        "sequence": 819
+      },
+      {
+        "arrival_index": 819,
+        "kind": "label",
+        "request_hash": "688322328c566771"
+      },
+      {
+        "arrival_index": 819,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "688322328c566771",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 820,
+        "kind": "prediction",
+        "request_hash": "ab1ea578ee8902d2",
+        "segment": "a",
+        "sequence": 820
+      },
+      {
+        "arrival_index": 821,
+        "kind": "prediction",
+        "request_hash": "1565c46f12c4c1c1",
+        "segment": "a",
+        "sequence": 821
+      },
+      {
+        "arrival_index": 821,
+        "kind": "label",
+        "request_hash": "492477efb0d0c0bb"
+      },
+      {
+        "arrival_index": 821,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "492477efb0d0c0bb",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 822,
+        "kind": "prediction",
+        "request_hash": "3a03a4c8c4f2e9a9",
+        "segment": "b",
+        "sequence": 822
+      },
+      {
+        "arrival_index": 823,
+        "kind": "prediction",
+        "request_hash": "b028d98b46501f25",
+        "segment": "b",
+        "sequence": 823
+      },
+      {
+        "arrival_index": 824,
+        "kind": "prediction",
+        "request_hash": "d05e6995a5013338",
+        "segment": "a",
+        "sequence": 824
+      },
+      {
+        "arrival_index": 824,
+        "kind": "label",
+        "request_hash": "58d1d0870a89ae17"
+      },
+      {
+        "arrival_index": 824,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "58d1d0870a89ae17",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 825,
+        "kind": "prediction",
+        "request_hash": "b31a0c675e7aca84",
+        "segment": "a",
+        "sequence": 825
+      },
+      {
+        "arrival_index": 826,
+        "kind": "prediction",
+        "request_hash": "6fc30bf6492e7bdd",
+        "segment": "a",
+        "sequence": 826
+      },
+      {
+        "arrival_index": 827,
+        "kind": "prediction",
+        "request_hash": "d37a9e2ff7b65c72",
+        "segment": "b",
+        "sequence": 827
+      },
+      {
+        "arrival_index": 827,
+        "kind": "label",
+        "request_hash": "366ad954c659e2f0"
+      },
+      {
+        "arrival_index": 827,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "366ad954c659e2f0",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 827,
+        "kind": "label",
+        "request_hash": "a56ec9653d440563"
+      },
+      {
+        "arrival_index": 827,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "a56ec9653d440563",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 827,
+        "kind": "label",
+        "request_hash": "6c950734091cc537"
+      },
+      {
+        "arrival_index": 827,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6c950734091cc537",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 828,
+        "kind": "prediction",
+        "request_hash": "4998150c5996f5fb",
+        "segment": "a",
+        "sequence": 828
+      },
+      {
+        "arrival_index": 828,
+        "kind": "label",
+        "request_hash": "a2d3608044a5ca43"
+      },
+      {
+        "arrival_index": 828,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "a2d3608044a5ca43",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 829,
+        "kind": "prediction",
+        "request_hash": "af021c92d493c64b",
+        "segment": "a",
+        "sequence": 829
+      },
+      {
+        "arrival_index": 829,
+        "kind": "label",
+        "request_hash": "9c6cf453c05ac68d"
+      },
+      {
+        "arrival_index": 829,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "9c6cf453c05ac68d",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 830,
+        "kind": "prediction",
+        "request_hash": "248eedd35aaa3261",
+        "segment": "b",
+        "sequence": 830
+      },
+      {
+        "arrival_index": 830,
+        "kind": "label",
+        "request_hash": "85d7b2f7a44b50ab"
+      },
+      {
+        "arrival_index": 830,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "85d7b2f7a44b50ab",
+        "segment": "b"
+      },
+      {
+        "alpha": 2.997668155098751e-05,
+        "arrival_index": 831,
+        "boundary": 0.3036561430615202,
+        "current_mean": 0.5079692077809711,
+        "effect": 0.0069596536843615775,
+        "kind": "look",
+        "look": 13,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 1024,
+        "reference_mean": 0.5010095540966095,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007958240950421622,
+        "transition": null
+      },
+      {
+        "arrival_index": 831,
+        "kind": "prediction",
+        "request_hash": "6c5e7334e0a82f6c",
+        "segment": "b",
+        "sequence": 831
+      },
+      {
+        "arrival_index": 832,
+        "kind": "prediction",
+        "request_hash": "185199afe09b62e9",
+        "segment": "b",
+        "sequence": 832
+      },
+      {
+        "arrival_index": 833,
+        "kind": "prediction",
+        "request_hash": "5ff3d90cc7ad1dbb",
+        "segment": "a",
+        "sequence": 833
+      },
+      {
+        "arrival_index": 833,
+        "kind": "label",
+        "request_hash": "6c5e7334e0a82f6c"
+      },
+      {
+        "arrival_index": 833,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6c5e7334e0a82f6c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "prediction",
+        "request_hash": "c34751923059d426",
+        "segment": "a",
+        "sequence": 834
+      },
+      {
+        "arrival_index": 834,
+        "kind": "label",
+        "request_hash": "9158d656aee5edb0"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "9158d656aee5edb0",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "label",
+        "request_hash": "efc1a556c81b8ab2"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "efc1a556c81b8ab2",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "label",
+        "request_hash": "e42ff05ce28e1afe"
+      },
+      {
+        "arrival_index": 834,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e42ff05ce28e1afe",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 835,
+        "kind": "prediction",
+        "request_hash": "dcc7c87c1bae477f",
+        "segment": "b",
+        "sequence": 835
+      },
+      {
+        "arrival_index": 835,
+        "kind": "label",
+        "request_hash": "c34751923059d426"
+      },
+      {
+        "arrival_index": 835,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "c34751923059d426",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 835,
+        "kind": "label",
+        "request_hash": "dcc7c87c1bae477f"
+      },
+      {
+        "arrival_index": 835,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "dcc7c87c1bae477f",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 836,
+        "kind": "prediction",
+        "request_hash": "123054d92de1cb9f",
+        "segment": "b",
+        "sequence": 836
+      },
+      {
+        "arrival_index": 836,
+        "kind": "label",
+        "request_hash": "185199afe09b62e9"
+      },
+      {
+        "arrival_index": 836,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "185199afe09b62e9",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 837,
+        "kind": "prediction",
+        "request_hash": "0bbf8c29fc145c7b",
+        "segment": "a",
+        "sequence": 837
+      },
+      {
+        "arrival_index": 837,
+        "kind": "label",
+        "request_hash": "aaa2c9c786e102e3"
+      },
+      {
+        "arrival_index": 837,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "aaa2c9c786e102e3",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 838,
+        "kind": "prediction",
+        "request_hash": "8d0daf4cbc51192f",
+        "segment": "b",
+        "sequence": 838
+      },
+      {
+        "arrival_index": 838,
+        "kind": "label",
+        "request_hash": "6fc30bf6492e7bdd"
+      },
+      {
+        "arrival_index": 838,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6fc30bf6492e7bdd",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 839,
+        "kind": "prediction",
+        "request_hash": "64f75c5cc4f9093a",
+        "segment": "a",
+        "sequence": 839
+      },
+      {
+        "arrival_index": 840,
+        "kind": "prediction",
+        "request_hash": "e803daa73a1eb146",
+        "segment": "b",
+        "sequence": 840
+      },
+      {
+        "arrival_index": 840,
+        "kind": "label",
+        "request_hash": "3a03a4c8c4f2e9a9"
+      },
+      {
+        "arrival_index": 840,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "3a03a4c8c4f2e9a9",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "prediction",
+        "request_hash": "e203c9ab4cc4c5b1",
+        "segment": "b",
+        "sequence": 841
+      },
+      {
+        "arrival_index": 841,
+        "kind": "label",
+        "request_hash": "ab1ea578ee8902d2"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ab1ea578ee8902d2",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "label",
+        "request_hash": "8d0daf4cbc51192f"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8d0daf4cbc51192f",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "label",
+        "request_hash": "64f75c5cc4f9093a"
+      },
+      {
+        "arrival_index": 841,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "64f75c5cc4f9093a",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "prediction",
+        "request_hash": "5ad68960fd102bce",
+        "segment": "b",
+        "sequence": 842
+      },
+      {
+        "arrival_index": 842,
+        "kind": "label",
+        "request_hash": "d37a9e2ff7b65c72"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d37a9e2ff7b65c72",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "label",
+        "request_hash": "0bbf8c29fc145c7b"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0bbf8c29fc145c7b",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "label",
+        "request_hash": "e803daa73a1eb146"
+      },
+      {
+        "arrival_index": 842,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e803daa73a1eb146",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 843,
+        "kind": "prediction",
+        "request_hash": "1d612be914024c2c",
+        "segment": "a",
+        "sequence": 843
+      },
+      {
+        "arrival_index": 843,
+        "kind": "label",
+        "request_hash": "0270a6488ebfd624"
+      },
+      {
+        "arrival_index": 843,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0270a6488ebfd624",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 844,
+        "kind": "prediction",
+        "request_hash": "3d0f080897e6a6de",
+        "segment": "a",
+        "sequence": 844
+      },
+      {
+        "arrival_index": 845,
+        "kind": "prediction",
+        "request_hash": "c16bbb04f8ac6b8d",
+        "segment": "a",
+        "sequence": 845
+      },
+      {
+        "arrival_index": 846,
+        "kind": "prediction",
+        "request_hash": "3d6bcc612976a3d9",
+        "segment": "a",
+        "sequence": 846
+      },
+      {
+        "arrival_index": 846,
+        "kind": "label",
+        "request_hash": "5ff3d90cc7ad1dbb"
+      },
+      {
+        "alpha": 2.997668155098751e-05,
+        "arrival_index": 846,
+        "boundary": 0.2940295735110944,
+        "current_mean": 0.0625,
+        "effect": -0.04296875,
+        "kind": "look",
+        "look": 13,
+        "metric": "quality_loss",
+        "phase": "clear",
+        "reference_count": 1024,
+        "reference_mean": 0.10546875,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007958240950421622,
+        "transition": null
+      },
+      {
+        "arrival_index": 846,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5ff3d90cc7ad1dbb",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 846,
+        "kind": "label",
+        "request_hash": "e203c9ab4cc4c5b1"
+      },
+      {
+        "arrival_index": 846,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e203c9ab4cc4c5b1",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 846,
+        "kind": "label",
+        "request_hash": "1d612be914024c2c"
+      },
+      {
+        "arrival_index": 846,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "1d612be914024c2c",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 847,
+        "kind": "prediction",
+        "request_hash": "5ee39b65791f3874",
+        "segment": "b",
+        "sequence": 847
+      },
+      {
+        "arrival_index": 848,
+        "kind": "prediction",
+        "request_hash": "de63c398fd77ecb5",
+        "segment": "a",
+        "sequence": 848
+      },
+      {
+        "arrival_index": 849,
+        "kind": "prediction",
+        "request_hash": "cc3b89cd0da4faab",
+        "segment": "a",
+        "sequence": 849
+      },
+      {
+        "arrival_index": 849,
+        "kind": "label",
+        "request_hash": "699a94e999b684ff"
+      },
+      {
+        "arrival_index": 849,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "699a94e999b684ff",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 849,
+        "kind": "label",
+        "request_hash": "1565c46f12c4c1c1"
+      },
+      {
+        "arrival_index": 849,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "1565c46f12c4c1c1",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 849,
+        "kind": "label",
+        "request_hash": "b028d98b46501f25"
+      },
+      {
+        "arrival_index": 849,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "b028d98b46501f25",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 850,
+        "kind": "prediction",
+        "request_hash": "6a29843118236765",
+        "segment": "a",
+        "sequence": 850
+      },
+      {
+        "arrival_index": 851,
+        "kind": "prediction",
+        "request_hash": "7a713f524a202382",
+        "segment": "b",
+        "sequence": 851
+      },
+      {
+        "arrival_index": 852,
+        "kind": "prediction",
+        "request_hash": "1cb93a4c2cfc9175",
+        "segment": "b",
+        "sequence": 852
+      },
+      {
+        "arrival_index": 852,
+        "kind": "label",
+        "request_hash": "123054d92de1cb9f"
+      },
+      {
+        "arrival_index": 852,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "123054d92de1cb9f",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 853,
+        "kind": "prediction",
+        "request_hash": "8b92f4194210cd4e",
+        "segment": "a",
+        "sequence": 853
+      },
+      {
+        "arrival_index": 853,
+        "kind": "label",
+        "request_hash": "1cb93a4c2cfc9175"
+      },
+      {
+        "arrival_index": 853,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "1cb93a4c2cfc9175",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 854,
+        "kind": "prediction",
+        "request_hash": "dfd053633e602bfd",
+        "segment": "a",
+        "sequence": 854
+      },
+      {
+        "arrival_index": 854,
+        "kind": "label",
+        "request_hash": "b31a0c675e7aca84"
+      },
+      {
+        "arrival_index": 854,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "b31a0c675e7aca84",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 855,
+        "kind": "prediction",
+        "request_hash": "5a2521fa5ff5c657",
+        "segment": "b",
+        "sequence": 855
+      },
+      {
+        "arrival_index": 855,
+        "kind": "label",
+        "request_hash": "d05e6995a5013338"
+      },
+      {
+        "arrival_index": 855,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d05e6995a5013338",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 855,
+        "kind": "label",
+        "request_hash": "3d0f080897e6a6de"
+      },
+      {
+        "arrival_index": 855,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "3d0f080897e6a6de",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 856,
+        "kind": "prediction",
+        "request_hash": "60a3b3a9db9dbc84",
+        "segment": "b",
+        "sequence": 856
+      },
+      {
+        "arrival_index": 857,
+        "kind": "prediction",
+        "request_hash": "6c71f369df3d37ba",
+        "segment": "b",
+        "sequence": 857
+      },
+      {
+        "arrival_index": 857,
+        "kind": "label",
+        "request_hash": "cc3b89cd0da4faab"
+      },
+      {
+        "arrival_index": 857,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "cc3b89cd0da4faab",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 858,
+        "kind": "prediction",
+        "request_hash": "0ca301037e0486f7",
+        "segment": "a",
+        "sequence": 858
+      },
+      {
+        "arrival_index": 858,
+        "kind": "label",
+        "request_hash": "248eedd35aaa3261"
+      },
+      {
+        "arrival_index": 858,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "248eedd35aaa3261",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 859,
+        "kind": "prediction",
+        "request_hash": "5255abab184362a0",
+        "segment": "a",
+        "sequence": 859
+      },
+      {
+        "arrival_index": 859,
+        "kind": "label",
+        "request_hash": "4998150c5996f5fb"
+      },
+      {
+        "arrival_index": 859,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "4998150c5996f5fb",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 859,
+        "kind": "label",
+        "request_hash": "af021c92d493c64b"
+      },
+      {
+        "arrival_index": 859,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "af021c92d493c64b",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 860,
+        "kind": "prediction",
+        "request_hash": "2f86e3f68dc28734",
+        "segment": "b",
+        "sequence": 860
+      },
+      {
+        "arrival_index": 861,
+        "kind": "prediction",
+        "request_hash": "67e33853cf6afb71",
+        "segment": "b",
+        "sequence": 861
+      },
+      {
+        "arrival_index": 862,
+        "kind": "prediction",
+        "request_hash": "c09de4415444fff4",
+        "segment": "a",
+        "sequence": 862
+      },
+      {
+        "arrival_index": 863,
+        "kind": "prediction",
+        "request_hash": "e59f45a7efc51974",
+        "segment": "a",
+        "sequence": 863
+      },
+      {
+        "arrival_index": 863,
+        "kind": "label",
+        "request_hash": "5ad68960fd102bce"
+      },
+      {
+        "arrival_index": 863,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5ad68960fd102bce",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 864,
+        "kind": "prediction",
+        "request_hash": "646a3a535ca6ecb0",
+        "segment": "a",
+        "sequence": 864
+      },
+      {
+        "arrival_index": 864,
+        "kind": "label",
+        "request_hash": "5ee39b65791f3874"
+      },
+      {
+        "arrival_index": 864,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5ee39b65791f3874",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 865,
+        "kind": "prediction",
+        "request_hash": "0181a26803309df3",
+        "segment": "b",
+        "sequence": 865
+      },
+      {
+        "arrival_index": 865,
+        "kind": "label",
+        "request_hash": "2f86e3f68dc28734"
+      },
+      {
+        "arrival_index": 865,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2f86e3f68dc28734",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 866,
+        "kind": "prediction",
+        "request_hash": "d0d477ab8a644402",
+        "segment": "b",
+        "sequence": 866
+      },
+      {
+        "arrival_index": 867,
+        "kind": "prediction",
+        "request_hash": "69832a80e1400e27",
+        "segment": "a",
+        "sequence": 867
+      },
+      {
+        "arrival_index": 867,
+        "kind": "label",
+        "request_hash": "6c71f369df3d37ba"
+      },
+      {
+        "arrival_index": 867,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "6c71f369df3d37ba",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 867,
+        "kind": "label",
+        "request_hash": "646a3a535ca6ecb0"
+      },
+      {
+        "arrival_index": 867,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "646a3a535ca6ecb0",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 868,
+        "kind": "prediction",
+        "request_hash": "8609deaa66eb480a",
+        "segment": "a",
+        "sequence": 868
+      },
+      {
+        "arrival_index": 868,
+        "kind": "label",
+        "request_hash": "c16bbb04f8ac6b8d"
+      },
+      {
+        "arrival_index": 868,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "c16bbb04f8ac6b8d",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "prediction",
+        "request_hash": "e7010404e54ced44",
+        "segment": "a",
+        "sequence": 869
+      },
+      {
+        "arrival_index": 869,
+        "kind": "label",
+        "request_hash": "8b92f4194210cd4e"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8b92f4194210cd4e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "label",
+        "request_hash": "5a2521fa5ff5c657"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5a2521fa5ff5c657",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "label",
+        "request_hash": "5255abab184362a0"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5255abab184362a0",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "label",
+        "request_hash": "0181a26803309df3"
+      },
+      {
+        "arrival_index": 869,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0181a26803309df3",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 870,
+        "kind": "prediction",
+        "request_hash": "e243d467c6a8cd7c",
+        "segment": "a",
+        "sequence": 870
+      },
+      {
+        "arrival_index": 870,
+        "kind": "label",
+        "request_hash": "de63c398fd77ecb5"
+      },
+      {
+        "arrival_index": 870,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "de63c398fd77ecb5",
+        "segment": "a"
+      },
+      {
+        "alpha": 0.00010338896290034467,
+        "arrival_index": 871,
+        "boundary": 0.2945325940209889,
+        "current_mean": 0.5090705020628075,
+        "effect": 0.006786111326748556,
+        "kind": "look",
+        "look": 7,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 512,
+        "reference_mean": 0.5022843907360589,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": false,
+        "spent_alpha": 0.007658853337563004,
+        "transition": null
+      },
+      {
+        "arrival_index": 871,
+        "kind": "prediction",
+        "request_hash": "bd76452aedac3f0e",
+        "segment": "a",
+        "sequence": 871
+      },
+      {
+        "arrival_index": 872,
+        "kind": "prediction",
+        "request_hash": "38dc425319b3ec6c",
+        "segment": "b",
+        "sequence": 872
+      },
+      {
+        "arrival_index": 872,
+        "kind": "label",
+        "request_hash": "3d6bcc612976a3d9"
+      },
+      {
+        "arrival_index": 872,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "3d6bcc612976a3d9",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 872,
+        "kind": "label",
+        "request_hash": "6a29843118236765"
+      },
+      {
+        "arrival_index": 872,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "6a29843118236765",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 873,
+        "kind": "prediction",
+        "request_hash": "d9040b616091b22a",
+        "segment": "a",
+        "sequence": 873
+      },
+      {
+        "arrival_index": 874,
+        "kind": "prediction",
+        "request_hash": "2a2d4b86a317d8d2",
+        "segment": "a",
+        "sequence": 874
+      },
+      {
+        "arrival_index": 874,
+        "kind": "label",
+        "request_hash": "8609deaa66eb480a"
+      },
+      {
+        "arrival_index": 874,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8609deaa66eb480a",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 875,
+        "kind": "prediction",
+        "request_hash": "69dbea873b8e3a9b",
+        "segment": "a",
+        "sequence": 875
+      },
+      {
+        "arrival_index": 876,
+        "kind": "prediction",
+        "request_hash": "e97405193abf160c",
+        "segment": "b",
+        "sequence": 876
+      },
+      {
+        "arrival_index": 877,
+        "kind": "prediction",
+        "request_hash": "5797518ed263e2e9",
+        "segment": "b",
+        "sequence": 877
+      },
+      {
+        "arrival_index": 877,
+        "kind": "label",
+        "request_hash": "7a713f524a202382"
+      },
+      {
+        "arrival_index": 877,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7a713f524a202382",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 877,
+        "kind": "label",
+        "request_hash": "e59f45a7efc51974"
+      },
+      {
+        "arrival_index": 877,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e59f45a7efc51974",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 878,
+        "kind": "prediction",
+        "request_hash": "b2acddcdbedad4cb",
+        "segment": "b",
+        "sequence": 878
+      },
+      {
+        "arrival_index": 878,
+        "kind": "label",
+        "request_hash": "b2acddcdbedad4cb"
+      },
+      {
+        "arrival_index": 878,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "b2acddcdbedad4cb",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 879,
+        "kind": "prediction",
+        "request_hash": "d860aa3831c30f36",
+        "segment": "a",
+        "sequence": 879
+      },
+      {
+        "arrival_index": 879,
+        "kind": "label",
+        "request_hash": "69832a80e1400e27"
+      },
+      {
+        "arrival_index": 879,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "69832a80e1400e27",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 880,
+        "kind": "prediction",
+        "request_hash": "a13b75e0ba928292",
+        "segment": "b",
+        "sequence": 880
+      },
+      {
+        "arrival_index": 880,
+        "kind": "label",
+        "request_hash": "dfd053633e602bfd"
+      },
+      {
+        "arrival_index": 880,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "dfd053633e602bfd",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 881,
+        "kind": "prediction",
+        "request_hash": "7c0042ede5e04c8c",
+        "segment": "a",
+        "sequence": 881
+      },
+      {
+        "arrival_index": 881,
+        "kind": "label",
+        "request_hash": "60a3b3a9db9dbc84"
+      },
+      {
+        "arrival_index": 881,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "60a3b3a9db9dbc84",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 881,
+        "kind": "label",
+        "request_hash": "7c0042ede5e04c8c"
+      },
+      {
+        "arrival_index": 881,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "7c0042ede5e04c8c",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "prediction",
+        "request_hash": "fcd11ef48f117bb0",
+        "segment": "b",
+        "sequence": 882
+      },
+      {
+        "arrival_index": 882,
+        "kind": "label",
+        "request_hash": "0ca301037e0486f7"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "0ca301037e0486f7",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "label",
+        "request_hash": "67e33853cf6afb71"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "67e33853cf6afb71",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "label",
+        "request_hash": "c09de4415444fff4"
+      },
+      {
+        "arrival_index": 882,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "c09de4415444fff4",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 883,
+        "kind": "prediction",
+        "request_hash": "4a9807ca30340abf",
+        "segment": "a",
+        "sequence": 883
+      },
+      {
+        "arrival_index": 884,
+        "kind": "prediction",
+        "request_hash": "275f6f2800934e6b",
+        "segment": "a",
+        "sequence": 884
+      },
+      {
+        "arrival_index": 884,
+        "kind": "label",
+        "request_hash": "e97405193abf160c"
+      },
+      {
+        "arrival_index": 884,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "e97405193abf160c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 885,
+        "kind": "prediction",
+        "request_hash": "cc33a20dd19294fd",
+        "segment": "b",
+        "sequence": 885
+      },
+      {
+        "arrival_index": 886,
+        "kind": "prediction",
+        "request_hash": "ed88432a88f73a49",
+        "segment": "b",
+        "sequence": 886
+      },
+      {
+        "arrival_index": 887,
+        "kind": "prediction",
+        "request_hash": "4a7ee5e5dfd315d6",
+        "segment": "b",
+        "sequence": 887
+      },
+      {
+        "arrival_index": 887,
+        "kind": "label",
+        "request_hash": "2a2d4b86a317d8d2"
+      },
+      {
+        "arrival_index": 887,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2a2d4b86a317d8d2",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 887,
+        "kind": "label",
+        "request_hash": "69dbea873b8e3a9b"
+      },
+      {
+        "alpha": 0.00010338896290034467,
+        "arrival_index": 887,
+        "boundary": 0.28400235042881694,
+        "current_mean": 0.046875,
+        "effect": -0.0703125,
+        "kind": "look",
+        "look": 7,
+        "metric": "quality_loss",
+        "phase": "cooldown",
+        "reference_count": 512,
+        "reference_mean": 0.1171875,
+        "sample_count": 64,
+        "segment": "a",
+        "signal": false,
+        "spent_alpha": 0.007658853337563004,
+        "transition": "resolved"
+      },
+      {
+        "arrival_index": 887,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "69dbea873b8e3a9b",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 888,
+        "kind": "prediction",
+        "request_hash": "1a75db6c59f23bdf",
+        "segment": "a",
+        "sequence": 888
+      },
+      {
+        "arrival_index": 889,
+        "kind": "prediction",
+        "request_hash": "2b6cb34004745358",
+        "segment": "b",
+        "sequence": 889
+      },
+      {
+        "arrival_index": 889,
+        "kind": "label",
+        "request_hash": "d0d477ab8a644402"
+      },
+      {
+        "arrival_index": 889,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d0d477ab8a644402",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 889,
+        "kind": "label",
+        "request_hash": "2b6cb34004745358"
+      },
+      {
+        "arrival_index": 889,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2b6cb34004745358",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 890,
+        "kind": "prediction",
+        "request_hash": "633c1c55879c1a81",
+        "segment": "a",
+        "sequence": 890
+      },
+      {
+        "arrival_index": 890,
+        "kind": "label",
+        "request_hash": "d9040b616091b22a"
+      },
+      {
+        "arrival_index": 890,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d9040b616091b22a",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 890,
+        "kind": "label",
+        "request_hash": "5797518ed263e2e9"
+      },
+      {
+        "arrival_index": 890,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "5797518ed263e2e9",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 891,
+        "kind": "prediction",
+        "request_hash": "bbc7a231d6739f52",
+        "segment": "b",
+        "sequence": 891
+      },
+      {
+        "arrival_index": 891,
+        "kind": "label",
+        "request_hash": "275f6f2800934e6b"
+      },
+      {
+        "arrival_index": 891,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "275f6f2800934e6b",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 891,
+        "kind": "label",
+        "request_hash": "4a7ee5e5dfd315d6"
+      },
+      {
+        "arrival_index": 891,
+        "kind": "joined",
+        "loss": 1,
+        "request_hash": "4a7ee5e5dfd315d6",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 892,
+        "kind": "prediction",
+        "request_hash": "a6219c3a9175f737",
+        "segment": "a",
+        "sequence": 892
+      },
+      {
+        "arrival_index": 892,
+        "kind": "label",
+        "request_hash": "e7010404e54ced44"
+      },
+      {
+        "arrival_index": 892,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e7010404e54ced44",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 893,
+        "kind": "prediction",
+        "request_hash": "2cc22c0e09883f69",
+        "segment": "b",
+        "sequence": 893
+      },
+      {
+        "arrival_index": 893,
+        "kind": "label",
+        "request_hash": "d860aa3831c30f36"
+      },
+      {
+        "arrival_index": 893,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "d860aa3831c30f36",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 894,
+        "kind": "prediction",
+        "request_hash": "772be0ba60299045",
+        "segment": "a",
+        "sequence": 894
+      },
+      {
+        "alpha": 2.5847240725086168e-05,
+        "arrival_index": 895,
+        "boundary": 0.30567525472379453,
+        "current_mean": 0.5035006287262358,
+        "effect": 0.0024910746296262776,
+        "kind": "look",
+        "look": 14,
+        "metric": "covariate_mean",
+        "phase": "clear",
+        "reference_count": 1024,
+        "reference_mean": 0.5010095540966095,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007984088191146708,
+        "transition": null
+      },
+      {
+        "arrival_index": 895,
+        "kind": "prediction",
+        "request_hash": "8c9f154412855340",
+        "segment": "a",
+        "sequence": 895
+      },
+      {
+        "arrival_index": 896,
+        "kind": "label",
+        "request_hash": "a13b75e0ba928292"
+      },
+      {
+        "arrival_index": 896,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "a13b75e0ba928292",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 896,
+        "kind": "label",
+        "request_hash": "4a9807ca30340abf"
+      },
+      {
+        "arrival_index": 896,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "4a9807ca30340abf",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 896,
+        "kind": "label",
+        "request_hash": "ed88432a88f73a49"
+      },
+      {
+        "arrival_index": 896,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "ed88432a88f73a49",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 898,
+        "kind": "label",
+        "request_hash": "e243d467c6a8cd7c"
+      },
+      {
+        "arrival_index": 898,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "e243d467c6a8cd7c",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 898,
+        "kind": "label",
+        "request_hash": "633c1c55879c1a81"
+      },
+      {
+        "arrival_index": 898,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "633c1c55879c1a81",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 899,
+        "kind": "label",
+        "request_hash": "1a75db6c59f23bdf"
+      },
+      {
+        "arrival_index": 899,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "1a75db6c59f23bdf",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 902,
+        "kind": "label",
+        "request_hash": "bd76452aedac3f0e"
+      },
+      {
+        "arrival_index": 902,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "bd76452aedac3f0e",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 902,
+        "kind": "label",
+        "request_hash": "fcd11ef48f117bb0"
+      },
+      {
+        "arrival_index": 902,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "fcd11ef48f117bb0",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 903,
+        "kind": "label",
+        "request_hash": "38dc425319b3ec6c"
+      },
+      {
+        "arrival_index": 903,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "38dc425319b3ec6c",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 910,
+        "kind": "label",
+        "request_hash": "8c9f154412855340"
+      },
+      {
+        "arrival_index": 910,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "8c9f154412855340",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 911,
+        "kind": "label",
+        "request_hash": "cc33a20dd19294fd"
+      },
+      {
+        "arrival_index": 911,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "cc33a20dd19294fd",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 912,
+        "kind": "label",
+        "request_hash": "bbc7a231d6739f52"
+      },
+      {
+        "arrival_index": 912,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "bbc7a231d6739f52",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 912,
+        "kind": "label",
+        "request_hash": "a6219c3a9175f737"
+      },
+      {
+        "arrival_index": 912,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "a6219c3a9175f737",
+        "segment": "a"
+      },
+      {
+        "arrival_index": 914,
+        "kind": "label",
+        "request_hash": "2cc22c0e09883f69"
+      },
+      {
+        "arrival_index": 914,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "2cc22c0e09883f69",
+        "segment": "b"
+      },
+      {
+        "arrival_index": 918,
+        "kind": "label",
+        "request_hash": "772be0ba60299045"
+      },
+      {
+        "alpha": 2.5847240725086168e-05,
+        "arrival_index": 918,
+        "boundary": 0.2961143330380587,
+        "current_mean": 0.09375,
+        "effect": -0.01171875,
+        "kind": "look",
+        "look": 14,
+        "metric": "quality_loss",
+        "phase": "clear",
+        "reference_count": 1024,
+        "reference_mean": 0.10546875,
+        "sample_count": 64,
+        "segment": "global",
+        "signal": false,
+        "spent_alpha": 0.007984088191146708,
+        "transition": null
+      },
+      {
+        "arrival_index": 918,
+        "kind": "joined",
+        "loss": 0,
+        "request_hash": "772be0ba60299045",
+        "segment": "a"
+      }
+    ],
+    "trace_events_evicted": 2230,
+    "trace_events_total": 2742
+  },
+  "stream_sha256": "07c404db31ebcd063f6ca76c984829cfa52567decb452e6d92cda75dd3146669"
+}
