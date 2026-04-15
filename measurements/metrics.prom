@@ -1,0 +1,76 @@
+# HELP drift_sentinel_predictions_total Unique predictions observed.
+# TYPE drift_sentinel_predictions_total counter
+drift_sentinel_predictions_total 896
+# TYPE drift_sentinel_labels_total counter
+drift_sentinel_labels_total 896
+# TYPE drift_sentinel_joined_total counter
+drift_sentinel_joined_total 896
+# TYPE drift_sentinel_pending_predictions gauge
+drift_sentinel_pending_predictions 0
+# TYPE drift_sentinel_pending_labels gauge
+drift_sentinel_pending_labels 0
+# TYPE drift_sentinel_duplicate_inputs_total counter
+drift_sentinel_duplicate_inputs_total 0
+# TYPE drift_sentinel_observations_total counter
+drift_sentinel_observations_total{metric="covariate_mean",segment="a"} 460
+drift_sentinel_observations_total{metric="covariate_mean",segment="b"} 436
+drift_sentinel_observations_total{metric="covariate_mean",segment="global"} 896
+drift_sentinel_observations_total{metric="quality_loss",segment="a"} 460
+drift_sentinel_observations_total{metric="quality_loss",segment="b"} 436
+drift_sentinel_observations_total{metric="quality_loss",segment="global"} 896
+# TYPE drift_sentinel_observed_mean gauge
+drift_sentinel_observed_mean{metric="covariate_mean",segment="a"} 0.502680826263
+drift_sentinel_observed_mean{metric="covariate_mean",segment="b"} 0.501099862011
+drift_sentinel_observed_mean{metric="covariate_mean",segment="global"} 0.501911517765
+drift_sentinel_observed_mean{metric="quality_loss",segment="a"} 0.39347826087
+drift_sentinel_observed_mean{metric="quality_loss",segment="b"} 0.362385321101
+drift_sentinel_observed_mean{metric="quality_loss",segment="global"} 0.378348214286
+# TYPE drift_sentinel_looks_total counter
+drift_sentinel_looks_total{metric="covariate_mean",segment="a"} 7
+drift_sentinel_looks_total{metric="covariate_mean",segment="b"} 6
+drift_sentinel_looks_total{metric="covariate_mean",segment="global"} 14
+drift_sentinel_looks_total{metric="quality_loss",segment="a"} 7
+drift_sentinel_looks_total{metric="quality_loss",segment="b"} 6
+drift_sentinel_looks_total{metric="quality_loss",segment="global"} 14
+# TYPE drift_sentinel_alerts_opened_total counter
+drift_sentinel_alerts_opened_total{metric="covariate_mean",segment="a"} 0
+drift_sentinel_alerts_opened_total{metric="covariate_mean",segment="b"} 0
+drift_sentinel_alerts_opened_total{metric="covariate_mean",segment="global"} 0
+drift_sentinel_alerts_opened_total{metric="quality_loss",segment="a"} 1
+drift_sentinel_alerts_opened_total{metric="quality_loss",segment="b"} 1
+drift_sentinel_alerts_opened_total{metric="quality_loss",segment="global"} 1
+# TYPE drift_sentinel_alerts_resolved_total counter
+drift_sentinel_alerts_resolved_total{metric="covariate_mean",segment="a"} 0
+drift_sentinel_alerts_resolved_total{metric="covariate_mean",segment="b"} 0
+drift_sentinel_alerts_resolved_total{metric="covariate_mean",segment="global"} 0
+drift_sentinel_alerts_resolved_total{metric="quality_loss",segment="a"} 1
+drift_sentinel_alerts_resolved_total{metric="quality_loss",segment="b"} 0
+drift_sentinel_alerts_resolved_total{metric="quality_loss",segment="global"} 1
+# TYPE drift_sentinel_alert_firing gauge
+drift_sentinel_alert_firing{metric="covariate_mean",segment="a"} 0
+drift_sentinel_alert_firing{metric="covariate_mean",segment="b"} 0
+drift_sentinel_alert_firing{metric="covariate_mean",segment="global"} 0
+drift_sentinel_alert_firing{metric="quality_loss",segment="a"} 0
+drift_sentinel_alert_firing{metric="quality_loss",segment="b"} 1
+drift_sentinel_alert_firing{metric="quality_loss",segment="global"} 0
+# TYPE drift_sentinel_alpha_spent gauge
+drift_sentinel_alpha_spent{metric="covariate_mean",segment="a"} 0.00765885333756
+drift_sentinel_alpha_spent{metric="covariate_mean",segment="b"} 0.00755546437466
+drift_sentinel_alpha_spent{metric="covariate_mean",segment="global"} 0.00798408819115
+drift_sentinel_alpha_spent{metric="quality_loss",segment="a"} 0.00765885333756
+drift_sentinel_alpha_spent{metric="quality_loss",segment="b"} 0.00755546437466
+drift_sentinel_alpha_spent{metric="quality_loss",segment="global"} 0.00798408819115
+# TYPE drift_sentinel_last_effect gauge
+drift_sentinel_last_effect{metric="covariate_mean",segment="a"} 0.00678611132675
+drift_sentinel_last_effect{metric="covariate_mean",segment="b"} -0.0064320462685
+drift_sentinel_last_effect{metric="covariate_mean",segment="global"} 0.00249107462963
+drift_sentinel_last_effect{metric="quality_loss",segment="a"} -0.0703125
+drift_sentinel_last_effect{metric="quality_loss",segment="b"} -0.015625
+drift_sentinel_last_effect{metric="quality_loss",segment="global"} -0.01171875
+# TYPE drift_sentinel_last_boundary gauge
+drift_sentinel_last_boundary{metric="covariate_mean",segment="a"} 0.294532594021
+drift_sentinel_last_boundary{metric="covariate_mean",segment="b"} 0.289896134886
+drift_sentinel_last_boundary{metric="covariate_mean",segment="global"} 0.305675254724
+drift_sentinel_last_boundary{metric="quality_loss",segment="a"} 0.284002350429
+drift_sentinel_last_boundary{metric="quality_loss",segment="b"} 0.279191072798
+drift_sentinel_last_boundary{metric="quality_loss",segment="global"} 0.296114333038
